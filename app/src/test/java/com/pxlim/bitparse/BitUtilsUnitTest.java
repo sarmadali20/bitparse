@@ -25,10 +25,6 @@ public class BitUtilsUnitTest {
         assertEquals(5, BitUtils.getBitsToChange(124,1000));
         assertNotEquals(4, BitUtils.getBitsToChange(124,1000));
     }
-    @Test
-    public void testPad() throws Exception {
-        PowerMockito.mockStatic(Log.class);
-        assertArrayEquals(new char[]{'0','0','0','0','0','0','0','1','0','1'}, BitUtils.pad(new char[]{'0','1','0','1'},10));
-    }
+
 
 }
