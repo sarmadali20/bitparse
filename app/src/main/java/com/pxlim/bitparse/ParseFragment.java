@@ -81,11 +81,10 @@ public class ParseFragment extends Fragment {
     }
 
     public void parseAndUpdateResults(String input) {
-        LinkedHashSet<String> results = new LinkedHashSet<>();
-        Stack<String> stack = new Stack<>();
-        ParseUtils.search(input,english_dict,stack,results);
+        LinkedHashSet<String> words = new LinkedHashSet<>();
+        ParseUtils.search(input,english_dict,words);
         StringBuilder sb = new StringBuilder();
-        for (String word : results) {
+        for (String word : words) {
                 sb.append(word);
                 sb.append("\n");
         }
