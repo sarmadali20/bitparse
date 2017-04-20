@@ -16,15 +16,14 @@ public class ParseUtils {
                 // Push the word to stack
                 words.push(substring);
                 // End of search
-                if (i == input.length() - 1) {
-                    results.addAll(words);
-                } else {
+                if (i < input.length()) {
                     // recursive search on the left over input
                     search(input.substring(i + 1), dictionary, words, results);
                 }
 
             }
         }
+        results.addAll(words);
     }
 
 }
